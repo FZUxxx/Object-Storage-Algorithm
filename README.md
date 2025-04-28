@@ -1,0 +1,12 @@
+初赛：
+分两个版本，mainfirst.cpp得分2550w左右。互不侵犯版本score2700w左右
+首先是标签分析
+![image](https://github.com/user-attachments/assets/a95da383-d5ab-4a37-93ff-372d7f2fbe25)
+mainfirst.cpp写入分布，两个认真副本，每个磁盘维护各自的大小标签，读取则读取最近的请求，同时将即将超时的请求抛弃
+前期
+![image](https://github.com/user-attachments/assets/b75967c5-b903-4dfd-9aa3-496563581a12)
+后期
+![image](https://github.com/user-attachments/assets/cfd03f82-52e4-46f1-b7a2-44476247f742)
+score2700w.cpp，单副本读取，实现二三副本与第一个副本互不侵犯，中间有明显界限
+![image](https://github.com/user-attachments/assets/f852efe8-461c-4e9a-92fd-a4b75904454b)
+复赛：优化了内存碎片，在后期让磁盘写入从当前读的磁头开始寻找空闲块，两个磁头各自分工各自的标签
